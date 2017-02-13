@@ -27,7 +27,7 @@ void selectionSort(auto& Data);//prototype
 
 void selectionSort(auto& Data)
 {
-	int i, j, minIndex, tmp;
+	string i, j, minIndex, tmp;
 	
 	for (i = 0; i < Data.size() - 1; i++)
 	{
