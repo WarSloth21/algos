@@ -12,6 +12,17 @@ using namespace std;
 \param [in] data The data set that will be searched
 \returns location of key if found or -1 if not found
 */
+
+void printVector(vector<string> inputs);
+
+void printVector(vector<string> inputs) {
+	for (unsigned int i = 0; i < inputs.size(); i++) {
+		cout << inputs[i].getString() << endl;
+		cout << endl;
+
+	}
+}
+
 void selectionSort(auto& Data);//prototype
 
 void selectionSort(auto& Data)
@@ -43,7 +54,7 @@ int main()
 {
   vector<string> inputs;
   string search_key, input;
-  int result;
+
   char choice;
 
    cout<<"Welcome to \"search it\". We first need some input data."<<endl;
@@ -73,10 +84,12 @@ int main()
     while(choice = 'y')//perform sort while choice is yes
     {
         void selectionSort(vector<string> inputs);
-		cout << selectionSort(vector<string> inputs);
+		
+		cout<< "Would you like to sort your inputs? (y = yes , n = no)" << endl;
+		cin >> choice;
     }
 
-   cout<<endl<<"Program \"search it\" is now finished."<<endl<<endl;
+   printVector(inputs);
 
     return 0;
 }
