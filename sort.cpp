@@ -17,7 +17,7 @@ void printVector(vector<string> inputs);
 
 void printVector(vector<string> inputs) {
 	for (unsigned int i = 0; i < inputs.size(); i++) {
-		cout << inputs[i].getString() << endl;
+		cout << inputs[i]() << endl;
 		cout << endl;
 
 	}
