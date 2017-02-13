@@ -55,8 +55,6 @@ int main()
   vector<string> inputs;
   string search_key, input;
 
-  char choice;
-
    cout<<"Welcome to \"search it\". We first need some input data."<<endl;
    cout<<"We'll assume the inputs do not have any spaces."<<endl<<endl;
    cout<<"To end input type the #-character (followed by Enter)"<<endl<<endl;
@@ -78,7 +76,7 @@ int main()
   }
  
     
-  selectionSort(auto& Data);
+  selectionSort(vector<string>inputs);
 		
 
    printVector(inputs);
