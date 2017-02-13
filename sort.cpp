@@ -78,7 +78,7 @@ int main()
   }
  
     
- string  selectionSort(inputs);
+  selectionSort(auto& Data);
 		
 
    printVector(inputs);
