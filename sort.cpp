@@ -12,31 +12,31 @@ using namespace std;
 \param [in] data The data set that will be searched
 \returns location of key if found or -1 if not found
 */
-void selectionSort(inputs);//prototype
+void selectionSort(auto& Data);//prototype
 
-void selectionSort(inputs);
+void selectionSort(auto& Data)
+{
+	int i, j, minIndex, tmp;
+	
+	for (i = 0; i < Data.size() - 1; i++)
 	{
-		int i, j, minIndex, tmp;
+		minIndex = i;
 		
-		for (i = 0 ; i < inputs.size() -1, i++)
+		//find smallest in unsorted part
+		for (j = i + 1; j < Data.size(); j++)
+	{
+		if (Data[j] < Data[minIndex])
+			minIndex = j;
+	}
+	
+		if (minIndex != i)
 		{
-			minIndex = i;
-			
-			//find smallest in unsorted part
-			for (j = i + 1; j < inputs.size(); j++)
-			{
-				if (inputs[j] < inputs[minIndex])
-					minIndex = j;
-			}
-			
-			if (minIndex != i)
-			{
-				tmp = inputs[i];
-				inputs[i] = inputs[minIndex];
-				inputs[minIndex] = tmp;
-			} //end if
-		} //end outer loop
-	} //end function
+			tmp = Data[i];
+			Data[i] = Data[minIndex];
+			Data[minIndex] = tmp;
+		} //end if
+	} //end outer loop
+} //end function
 	
 
 int main()
