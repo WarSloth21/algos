@@ -66,13 +66,13 @@ int main()
        exit(1);//nothing to do but quit program
   }
  
-    cout<< "Would you like to sort your inputs? (y = yes , n = no)" endl;
+    cout<< "Would you like to sort your inputs? (y = yes , n = no)" << endl;
 	cin >> choice;
 
  
     while(choice = 'y')//perform sort while choice is yes
     {
-        void selectionSort(inputs);
+        void selectionSort(auto& Data);
     }
 
    cout<<endl<<"Program \"search it\" is now finished."<<endl<<endl;
