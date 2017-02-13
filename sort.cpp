@@ -72,7 +72,7 @@ int main()
  
     while(choice = 'y')//perform sort while choice is yes
     {
-        void selectionSort(auto& Data);
+        void selectionSort(vector<string> inputs);
     }
 
    cout<<endl<<"Program \"search it\" is now finished."<<endl<<endl;
