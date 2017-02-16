@@ -27,7 +27,7 @@ void selectionSort(auto& Data);//prototype
 
 void selectionSort(auto& Data)
 {
-	int i, j, minIndex;
+	int i, j, minIndex, passes;
 	string tmp;
 	
 	for (i = 0; i < Data.size() - 1; i++)
@@ -47,6 +47,11 @@ void selectionSort(auto& Data)
 			Data[i] = Data[minIndex];
 			Data[minIndex] = tmp;
 		} //end if
+		passes = passes + 1;
+		if (passes > 20000)
+		{
+			cout << "Number of passes:  " << passes << endl;
+		}
 	} //end outer loop
 } //end function
 	
